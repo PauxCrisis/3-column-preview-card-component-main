@@ -1,0 +1,106 @@
+@import url('https://fonts.google.com/specimen/Lexend#:~:text=https%3A//fonts.googleapis.com/css2%3Ffamily%3DLexend%26display%3Dswap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --max-width: 1400px;
+    --font-size: 15px;
+    --lexend: 'Lexend', sans-serif;
+    --shoulders: 'Big Shoulders Display', cursive;
+}
+html{
+    box-sizing: border-box;
+    font-family: var(--font);
+    scroll-behavior: smooth;
+    background-color: var(--Very-light-gray);
+} 
+.contenedor{
+    margin: 4rem 1rem;
+    background-color: var(--White);
+    color: var(--Very-light-gray);
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    padding: 2rem;
+}
+button{
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+    border: 0;
+    background-color: var(--Very-light-gray);
+    margin-bottom: 0;
+}
+#card1{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem; 
+}
+#card1 button{
+    color: var(--Bright-orange);
+}
+#card2{
+    background-color: var(--Dark-cyan);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#card2 button{
+    color: var(--Dark-cyan);
+}
+#card3{
+    background-color: var(--Very-dark-cyan);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+#card3 button{
+    color: var(--Very-dark-cyan);
+}
+h1{
+    font-family: var(--shoulders);
+}
+p{
+    font-family: var(--lexend);
+    letter-spacing: 1px;
+}
+button:hover{
+    border: 1px solid var(--Transparent-white);
+    background-color: transparent;
+    color: var(--Transparent-white) !important;
+}
+
+@media screen and (min-width: 376px) {
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        grid-row: repeat(4);
+        justify-content: space-between;
+        align-content: space-between;
+        width: 200px;
+    }
+    #card1{
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem; 
+    }
+    #card3{
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+    }
+    p{
+        margin-top: 0.4rem;
+        margin-bottom: 4rem;
+        line-height: 1.5rem;
+    }
+}
